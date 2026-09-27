@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>DogBi — A Little Friend</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            DogBi
+        </div>
+
+        <nav class="navigation">
+            <a href="#about">ABOUT</a>
+            <a href="#collection">COLLECTION</a>
+        </nav>
+
+        <button
+            class="bag-button"
+            onclick="openBag()">
+            BAG <span id="bag-count">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <p class="eyebrow">
+                THE DOGBI COLLECTION
+            </p>
+
+            <h1>
+                함께할 강아지를<br>
+                선택해 보세요
+            </h1>
+
+            <p class="hero-description">
+                마음에 드는 강아지를 골라보세요.<br>
+                정보를 확인하고 가격을 비교한 뒤,<br>
+                구매하기까지 진행해 보세요.
+            </p>
+
+            <a
+                href="#collection"
+                class="hero-button">
+                VIEW COLLECTION
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section
+        id="about"
+        class="about-section">
+
+        <div class="about-label">
+            ABOUT DOGBI
+        </div>
+
+        <div class="about-content">
+
+            <h2>
+                당신의<br>
+                동반자를<br>
+                소개합니다
+            </h2>
+
+            <p>
+                각 강아지에는 번호와 품종, 성격,
+                행복지수와 분노지수, 그리고 가격이 부여되어 있습니다.
+                <br><br>
+                당신은 최고의  상품을 선택할 수 있습니다.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= COLLECTION ================= -->
+
+    <section
+        id="collection"
+        class="collection-section">
+
+        <div class="collection-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    DOGBI / COLLECTION
+                </p>
+
+                <h2>
+                    THE COLLECTION
+                </h2>
+
+            </div>
+
+            <p class="collection-count">
+                16 OBJECTS
+            </p>
+
+        </div>
+
+        <div
+            id="product-grid"
+            class="product-grid">
+
+            <!-- JS로 상품이 들어옵니다 -->
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+            DogBi
+        </div>
+
+        <p class="fictional-company">
+            이 회사는 존재하지 않는 가상의 미술 프로젝트 회사입니다.
+        </p>
+
+        <p class="creator">
+            Designed &amp; Created by 최승빈
+        </p>
+
+        <p class="copyright">
+            © 2026 DOGBI
+        </p>
+
+    </footer>
+
+
+    <!-- ================= PRODUCT MODAL ================= -->
+
+    <div
+        id="product-modal"
+        class="modal">
+
+        <div class="modal-inner">
+
+            <button
+                class="modal-close"
+                onclick="closeProduct()"
+                aria-label="닫기">
+                &times;
+            </button>
+
+            <div class="product-detail">
+
+                <div class="detail-image">
+
+                    <img
+                        id="detail-image"
+                        src=""
+                        alt="DogBi Product">
+
+                </div>
+
+                <div class="detail-info">
+
+                    <p
+                        class="eyebrow"
+                        id="detail-number">
+                        DOG No.001
+                    </p>
+
+                    <h2 id="detail-name">
+                        MALTIPOO
+                    </h2>
+
+                    <div class="detail-spec">
+
+                        <div>
+
+                            <span>
+                                행복지수
+                            </span>
+
+                            <strong id="detail-happiness">
+                                92%
+                            </strong>
+
+                        </div>
+
+                        <div>
+
+                            <span>
+                                분노지수
+                            </span>
+
+                            <strong id="detail-anger">
+                                8%
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <p
+                        id="detail-description"
+                        class="detail-description">
+                        사람을 좋아하고 애교가 많으며,
+                        새로운 환경에서도 비교적 빠르게 적응하는 성격입니다.
+                    </p>
+
+                    <div
+                        class="detail-price"
+                        id="detail-price">
+                        ₩9,900,000
+                    </div>
+
+                    <div class="quantity">
+
+                        <button
+                            type="button"
+                            onclick="changeQuantity(-1)">
+                            −
+                        </button>
+
+                        <span id="quantity">
+                            1
+                        </span>
+
+                        <button
+                            type="button"
+                            onclick="changeQuantity(1)">
+                            +
+                        </button>
+
+                    </div>
+
+                    <div class="purchase-buttons">
+
+                        <button
+                            type="button"
+                            class="add-button"
+                            onclick="addToBag()">
+                            ADD TO BAG
+                        </button>
+
+                        <button
+                            type="button"
+                            class="buy-button"
+                            onclick="cannotPurchase()">
+                            BUY NOW
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= BAG ================= -->
+
+    <div
+        id="bag-modal"
+        class="bag-modal">
+
+        <div class="bag-panel">
+
+            <button
+                class="modal-close"
+                onclick="closeBag()"
+                aria-label="닫기">
+                &times;
+            </button>
+
+            <p class="eyebrow">
+                DOGBI
+            </p>
+
+            <h2>
+                YOUR BAG
+            </h2>
+
+            <div id="bag-items">
+                <!-- 장바구니 아이템 -->
+            </div>
+
+            <div class="bag-total">
+
+                <span>
+                    TOTAL
+                </span>
+
+                <strong id="bag-total-price">
+                    ₩0
+                </strong>
+
+            </div>
+
+            <button
+                type="button"
+                class="checkout-button"
+                onclick="cannotPurchase()">
+                CHECKOUT
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PURCHASE MESSAGE ================= -->
+
+    <div
+        id="purchase-modal"
+        class="purchase-modal">
+
+        <div class="purchase-message">
+
+            <p class="eyebrow">
+                DOGBI
+            </p>
+
+            <h2>
+                당신은 방금<br>
+                생명을 구매하려 했습니다.
+            </h2>
+
+            <div class="message-line"></div>
+
+            <p class="korean-message">
+                가족이라고 부르던 존재를,<br>
+                가격표가 붙은 상품으로 선택했습니다.
+            </p>
+
+            <p class="message-description">
+                품종을 보고,<br>
+                외모를 보고,<br>
+                성격을 확인하고,<br>
+                가격을 비교한 뒤
+                               <br><br>
+               구매하기를 눌렀습니다.
+            </p>
+
+            <button
+                type="button"
+                onclick="openPurchaseExplanation()">
+                NEXT
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= PURCHASE EXPLANATION ================= -->
+
+    <div
+        id="purchase-explanation-modal"
+        class="purchase-explanation-modal">
+
+        <div class="purchase-explanation-inner">
+
+
+            <!-- ===== 상단 ===== -->
+
+            <div class="purchase-explanation-top">
+
+                <div>
+
+                    <p class="eyebrow">
+                        DOGBI                     </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="purchase-explanation-close"
+                    onclick="closePurchaseExplanation()">
+                    CLOSE
+                </button>
+
+            </div>
+
+
+            <!-- ===== 작품 정보 ===== -->
+
+            <div class="work-information">
+
+                <div class="work-information-item">
+
+                    <span>
+                        TITLE
+                    </span>
+
+                    <strong>
+                        구매하기
+                    </strong>
+
+                </div>
+
+
+                <div class="work-information-item">
+
+                    <span>
+                        SIZE
+                    </span>
+
+                    <strong>
+                        152 × 270 cm
+                    </strong>
+
+                </div>
+
+
+                <div class="work-information-item">
+
+                    <span>
+                        MATERIAL
+                    </span>
+
+                    <strong>
+                        벨벳, 비닐 지퍼백,
+                        우드락 출력물, 인쇄물,
+                        오브제, QR
+                    </strong>
+
+                </div>
+
+
+                <div class="work-information-item">
+
+                    <span>
+                        YEAR
+                    </span>
+
+                    <strong>
+                        2026
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- ===== 작품 제목 ===== -->
+
+            <div class="purchase-explanation-title-wrap">
+
+                <h2 class="purchase-explanation-title">
+                    구매하기
+                </h2>
+
+                <p class="purchase-explanation-subtitle">
+                    우리는 무엇을 구매하고,<br>
+                    무엇을 가족으로 맞이하는가.
+                </p>
+
+            </div>
+
+
+            <!-- ===== 작품 설명 본문 ===== -->
+
+            <div class="purchase-explanation-body">
+
+
+                <!-- 01 VALUE -->
+
+                <section class="purchase-explanation-section">
+
+                    <p class="purchase-explanation-number">
+                        01 / VALUE
+                    </p>
+
+                    <h3>
+                        가격은 생명의 가치를<br>
+                        측정하지 않습니다.
+                    </h3>
+
+                    <p>
+                        DOGBI의 강아지들에게는 서로 다른 가격이 부여되어 있습니다.
+                        수백만 원의 가격표를 바라보면 우리는 자연스럽게
+                        그 차이에 대한 이유를 찾게 됩니다.
+                    </p>
+
+                    <p>
+                        왜 이 강아지는 더 비싼가.
+                        왜 다른 강아지는 더 저렴한가.
+                        더 귀여워서일까,
+                        더 인기 있는 품종이기 때문일까,
+                        성격이 더 좋아서일까.
+                    </p>
+
+                    <p>
+                        그러나 이 가격에는 생명의 실제 가치를 측정할 수 있는
+                        객관적인 기준이 존재하지 않습니다.
+                    </p>
+
+                    <p>
+                        가격은 가치를 발견하는 숫자처럼 보이지만,
+                        동시에 그 존재를 바라보는 우리의 가치판단을 만들어냅니다.
+                    </p>
+
+                </section>
+
+
+                <!-- 강조 -->
+
+                <div class="purchase-explanation-highlight">
+
+                    <p>
+                        우리는 가격을 보고<br>
+                        그 존재의 가치를 생각하기 시작합니다.
+                    </p>
+
+                </div>
+
+
+                <!-- 02 INFORMATION -->
+
+                <section class="purchase-explanation-section">
+
+                    <p class="purchase-explanation-number">
+                        02 / INFORMATION
+                    </p>
+
+                    <h3>
+                        정보는 이해를 위해 존재하지만,<br>
+                        선택의 기준이 되기도 합니다.
+                    </h3>
+
+                    <p>
+                        DOGBI는 각각의 강아지에게
+                        품종, 성격, 행복지수, 분노지수와 같은 정보를 부여합니다.
+                    </p>
+
+                    <p>
+                        이러한 정보는 한 존재를 이해하기 위한 정보처럼 보입니다.
+                        하지만 동일한 정보가 상품의 화면 안에 놓이는 순간
+                        다른 역할을 갖게 됩니다.
+                    </p>
+
+                    <p>
+                        우리는 정보를 읽고 비교합니다.
+                        더 귀여운지,
+                        더 순한지,
+                        더 특별한지,
+                        무엇이 나에게 더 적합한지를 판단합니다.
+                    </p>
+
+                </section>
+
+
+                <!-- 03 LANGUAGE -->
+
+                <section class="purchase-explanation-section">
+
+                    <p class="purchase-explanation-number">
+                        03 / LANGUAGE
+                    </p>
+
+                    <h3>
+                        생명을 상품의 언어로<br>
+                        옮겨놓습니다.
+                    </h3>
+
+                    <p>
+                        DOGBI는 강아지를 상품으로 설명하기 위해
+                        상품이 사용하는 언어를 가져옵니다.
+                    </p>
+
+                    <p>
+                        DOG No.,
+                        품종,
+                        성격,
+                        지수,
+                        가격,
+                        BAG,
+                        CHECKOUT,
+                        BUY NOW.
+                    </p>
+
+                    <p>
+                        한 생명은 이러한 언어를 통해
+                        선택하고 비교할 수 있는 대상으로 변환됩니다.
+                    </p>
+
+                </section>
+
+
+                <!-- 04 FAMILY -->
+
+                <section class="purchase-explanation-section">
+
+                    <p class="purchase-explanation-number">
+                        04 / FAMILY
+                    </p>
+
+                    <h3>
+                        우리는 한 존재를<br>
+                        가족이라고 부릅니다.
+                    </h3>
+
+                    <p>
+                        반려견은 가족,
+                        아이,
+                        친구,
+                        동반자라고 불립니다.
+                    </p>
+
+                    <p>
+                        그러나 같은 존재를 바라보면서
+                        품종과 외모, 성격과 희소성,
+                        가격을 기준으로 비교하기도 합니다.
+                    </p>
+
+                    <p>
+                        DOGBI가 바라보는 것은
+                        이러한 두 언어가 동시에 존재하는 지점입니다.
+                    </p>
+
+                    <p>
+                        가족이라고 부르는 존재를
+                        상품의 기준으로 선택하게 되는 순간,
+                        우리는 무엇을 보고 있는지 다시 묻게 됩니다.
+                    </p>
+
+                </section>
+
+
+                <!-- 05 SYSTEM -->
+
+                <section class="purchase-explanation-section">
+
+                    <p class="purchase-explanation-number">
+                        05 / SYSTEM
+                    </p>
+
+                    <h3>
+                        선택받기 위해<br>
+                        전시되는 생명.
+                    </h3>
+
+                    <p>
+                        상품은 선택받기 위해 전시됩니다.
+                    </p>
+
+                    <p>
+                        더 잘 보이도록 정리되고,
+                        정보를 제공하고,
+                        특징을 강조하고,
+                        가격을 표시합니다.
+                    </p>
+
+                    <p>
+                        DOGBI 역시 같은 구조를 사용합니다.
+                        강아지의 이미지를 보여주고,
+                        정보를 정리하고,
+                        가격을 부여하고,
+                        구매 버튼을 배치합니다.
+                    </p>
+
+                    <p>
+                        이것은 단순히 펫샵의 외관을 재현하는 것이 아니라
+                        하나의 생명이 인간의 선택을 받기 위해
+                        상품의 형식으로 정리되는 구조를 드러내기 위한 것입니다.
+                    </p>
+
+                </section>
+
+
+                <!-- 06 CHOOSING -->
+
+                <section class="purchase-explanation-section">
+
+                    <p class="purchase-explanation-number">
+                        06 / CHOOSING
+                    </p>
+
+                    <h3>
+                        관객은 여러 상품 사이에서 <br> 선택합니다.
+                       
+                    </h3>
+
+                    <p>
+                        관객은 강아지를 봅니다.
+	                마음에 드는 품종을 고르고, 정보를 읽고, 가격을 확인합니다.
+                    </p>
+
+                    <p>
+                       하나를 고르는 데 그치지 않습니다.
+	              여러 상품을 비교하고, 장바구니에 담고, 수량을 조정하고, 결제를 진행하려 합니다.
+                    </p>
+
+                    <p>
+                        그리고 원하는 상품을 추가한 뒤
+	                구매를 진행합니다.
+                    </p>
+
+                    <p>
+                        DOGBI는 그 익숙한 소비의 과정을
+                        생명이라는 대상에 그대로 옮겨놓습니다.
+                    </p>
+
+                </section>
+
+
+                <!-- 07 CONSUMER -->
+
+                <section class="purchase-explanation-section">
+
+                    <p class="purchase-explanation-number">
+                        07 / CONSUMER
+                    </p>
+
+                    <h3>
+                        관객은 잠시<br>
+                        소비자가 됩니다.
+                    </h3>
+
+                    <p>
+                        이 작품에서 관객은 단순한 감상자가 아닙니다.
+                    </p>
+
+                    <p>
+                        사이트에 접속하고,
+                        상품을 보고,
+                        비교하고,
+                        장바구니에 담고,
+                        구매를 시도합니다.
+                    </p>
+
+                    <p>
+                        작품은 이러한 행동을 통해
+                        관객을 실제 소비의 위치에 놓습니다.
+                    </p>
+
+                    <p>
+                        그리고 바로 그 행동이 이루어진 순간,
+                        쇼핑의 과정은 중단됩니다.
+                    </p>
+
+                </section>
+
+
+                <!-- 08 INTERRUPTION -->
+
+                <section class="purchase-explanation-section">
+
+                    <p class="purchase-explanation-number">
+                        08 / INTERRUPTION
+                    </p>
+
+                    <h3>
+                        그리고 구매는<br>
+                        중단됩니다.
+                    </h3>
+
+                    <p>
+                        BUY NOW를 누르는 순간
+                        상품을 구매하는 과정은 더 이상 진행되지 않습니다.
+                    </p>
+
+                    <div class="purchase-explanation-highlight">
+
+                        <p>
+                            THIS PRODUCT CANNOT BE PURCHASED.
+                        </p>
+
+                    </div>
+
+                    <p>
+                        작품은 여기서 관객의 행동을
+                        다시 관객에게 돌려줍니다.
+                    </p>
+
+                    <p>
+                        나는 왜 이 강아지를 선택했는가.
+                        무엇을 보고 비교했는가.
+                        그리고 왜 그것을 구매하려 했는가.
+                    </p>
+
+                </section>
+
+
+                <!-- 09 CHOICE -->
+
+                <section class="purchase-explanation-section">
+
+                    <p class="purchase-explanation-number">
+                        09 / CHOICE
+                    </p>
+
+                    <h3>
+                        선택의 문제는<br>
+                        구매에서 끝나지 않습니다.
+                    </h3>
+
+                    <p>
+                        반려견과 함께 살아가는 것은
+                        하나의 생명과 관계를 맺는 일입니다.
+                    </p>
+
+                    <p>
+                        그러나 선택의 과정에서
+                        외모와 품종, 성격과 조건,
+                        선호와 가격이 개입하기 시작하면
+                        생명은 다시 비교 가능한 대상으로 놓일 수 있습니다.
+                    </p>
+
+                    <p>
+                        DOGBI는 어떤 선택이 옳다고 말하기보다
+                        우리가 한 생명을 선택할 때
+                        무엇을 기준으로 바라보고 있는지를 드러냅니다.
+                    </p>
+
+                </section>
+
+
+                <!-- FINAL -->
+
+                <section class="purchase-explanation-final">
+
+                    <p>
+                        가격은 생명의 가치를<br>
+                        결정할 수 있는가.
+                    </p>
+
+                    <p>
+                        우리는 언제부터<br>
+                        생명을 선택하는 것과<br>
+                        상품을 선택하는 것을<br>
+                        같은 방식으로 바라보게 되었는가.
+                    </p>
+
+                </section>
+
+
+            </div>
+
+
+            <!-- ================= EXPLANATION FOOTER ================= -->
+
+            <div class="purchase-explanation-footer">
+
+                <div>
+
+                    <p>
+                        DOGBI
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <p>
+                        CONCEPTUAL ART PROJECT
+                    </p>
+
+                    <p>
+                        Designed &amp; Created by 최승빈
+                    </p>
+
+                </div>
+
+                <div>
+
+                    <p>
+                        © 2026 DOGBI
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= SCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
