@@ -447,3 +447,10 @@ document.addEventListener("DOMContentLoaded", function() {
         btn.addEventListener("click", closePurchaseExplanation);
     });
 });
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
