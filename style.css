@@ -52,6 +52,8 @@ body.no-scroll {
     font-weight: 700;
     letter-spacing: -1px;
     color: #27231F;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .navigation {
