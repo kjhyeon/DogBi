@@ -1568,8 +1568,8 @@ function createWelcomeNotice() {
             >
 
                 마음에 드는 강아지를 골라 <br>
-	"ADD TO BAG"을 눌러 장바구니에 담아 <br> 구매를 진행하거나, <br>
-	"BUY NOW"를 눌러 바로 구매를 진행해 보세요. 
+	"ADD TO BAG"으로 장바구니에 담아보거나  <br>
+	"BUY NOW"를 눌러 바로 구매를 진행해 보세요.
 
             </p>
 
