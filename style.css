@@ -1280,3 +1280,278 @@ body.no-scroll {
     }
 
 }
+
+/* =========================================================
+   09-A. WORK EXPLANATION ACTIONS
+   BACK / CLOSE / X
+========================================================= */
+
+.purchase-explanation-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.purchase-explanation-back,
+.purchase-explanation-close {
+    min-width: 58px;
+    height: 34px;
+    padding: 0 12px;
+    border: 1px solid rgba(39, 35, 31, 0.28);
+    background: transparent;
+    color: #27231F;
+    cursor: pointer;
+    font-size: 10px;
+    letter-spacing: 1.6px;
+    font-weight: 700;
+}
+
+.purchase-explanation-back:hover,
+.purchase-explanation-close:hover {
+    background: rgba(39, 35, 31, 0.05);
+}
+
+
+
+/* =========================================================
+   09-B. EXPLANATION COLOR BRIDGE
+   작품설명 창만 아주 살짝 따뜻한 톤으로 변경
+   넥스트 창의 #b01c2e는 수정하지 않음
+========================================================= */
+
+.purchase-explanation-modal {
+    background: #F3EEE7;
+}
+
+.purchase-explanation-top {
+    border-bottom-color: rgba(39, 35, 31, 0.13);
+}
+
+/* 붉은 강조문은 명조체 계열로 전환하여 글의 호흡을 분리 */
+.purchase-explanation-highlight p {
+    font-family: "Noto Serif KR", "Noto Serif CJK KR", "Nanum Myeongjo", "바탕", "Batang", Georgia, "Times New Roman", serif;
+    font-weight: 500;
+    line-height: 1.85;
+    letter-spacing: -0.1px;
+
+    /* 모든 모바일 브라우저에서 동일한 붉은색 유지 */
+    color: #b01c2e !important;
+    -webkit-text-fill-color: #b01c2e;
+    forced-color-adjust: none;
+}
+
+
+/* =========================================================
+   06-A. PRODUCT PRICE + EXTRA IMAGE BUTTON
+========================================================= */
+
+.detail-price-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 25px;
+}
+
+.detail-price-row .detail-price {
+    margin-bottom: 0;
+}
+
+.detail-image-button {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(39, 35, 31, 0.22);
+    background: transparent;
+    color: #27231F;
+    cursor: pointer;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.detail-image-button:hover {
+    background: rgba(39, 35, 31, 0.05);
+}
+
+.magnifier-icon {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    display: block;
+    border: 1.7px solid currentColor;
+    border-radius: 50%;
+}
+
+.magnifier-icon::after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 1.7px;
+    right: -5px;
+    bottom: -3px;
+    background: currentColor;
+    transform: rotate(45deg);
+    transform-origin: left center;
+}
+
+
+/* =========================================================
+   06-B. EXTRA PRODUCT IMAGE MODAL
+   모바일 중심 / 중앙 정사각형 / 바깥 blur backdrop
+========================================================= */
+
+.detail-extra-image-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 7000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.detail-extra-image-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 19, 18, 0.56);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+}
+
+.detail-extra-image-frame {
+    position: relative;
+    z-index: 2;
+    width: min(86vw, 420px);
+    aspect-ratio: 1 / 1;
+    background: #F7F4EC;
+    overflow: hidden;
+    box-shadow: 0 22px 60px rgba(0, 0, 0, 0.28);
+}
+
+.detail-extra-image-frame img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    background: #E9E2D6;
+}
+
+.detail-extra-image-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 4;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(39, 35, 31, 0.18);
+    background: rgba(247, 244, 236, 0.94);
+    color: #27231F;
+    cursor: pointer;
+    font-size: 28px;
+    line-height: 1;
+    padding: 0;
+}
+
+.detail-extra-image-close:hover {
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   MOBILE REFINEMENTS
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .purchase-explanation-actions {
+        gap: 6px;
+    }
+
+    .purchase-explanation-back,
+    .purchase-explanation-close {
+        min-width: 54px;
+        height: 34px;
+        padding: 0 9px;
+        font-size: 8px;
+        letter-spacing: 1.2px;
+    }
+
+    .purchase-explanation-highlight p {
+        font-size: 15px;
+        line-height: 1.9;
+        font-family: "Noto Serif KR", "Noto Serif CJK KR", "Nanum Myeongjo", "바탕", "Batang", Georgia, "Times New Roman", serif;
+
+        color: #b01c2e !important;
+        -webkit-text-fill-color: #b01c2e;
+        forced-color-adjust: none;
+    }
+
+    .detail-price-row {
+        gap: 10px;
+        margin-bottom: 23px;
+    }
+
+    .detail-price-row .detail-price {
+        font-size: 18px;
+    }
+
+    .detail-image-button {
+        width: 44px;
+        height: 44px;
+        flex-basis: 44px;
+    }
+
+    .magnifier-icon {
+        width: 15px;
+        height: 15px;
+    }
+
+    .detail-extra-image-modal {
+        padding: 18px;
+    }
+
+    .detail-extra-image-frame {
+        width: min(84vw, 380px);
+    }
+
+    .detail-extra-image-close {
+        top: 8px;
+        right: 8px;
+        width: 44px;
+        height: 44px;
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 374px) {
+
+    .purchase-explanation-actions {
+        gap: 4px;
+    }
+
+    .purchase-explanation-back,
+    .purchase-explanation-close {
+        min-width: 50px;
+        height: 32px;
+        padding: 0 7px;
+        font-size: 7.5px;
+        letter-spacing: 1px;
+    }
+
+    .detail-price-row .detail-price {
+        font-size: 17px;
+    }
+
+    .detail-image-button {
+        width: 42px;
+        height: 42px;
+        flex-basis: 42px;
+    }
+}
+
