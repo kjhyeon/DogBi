@@ -232,10 +232,23 @@
                         새로운 환경에서도 비교적 빠르게 적응하는 성격입니다.
                     </p>
 
-                    <div
-                        class="detail-price"
-                        id="detail-price">
-                        ₩9,900,000
+                    <div class="detail-price-row">
+
+                        <div
+                            class="detail-price"
+                            id="detail-price">
+                            ₩9,900,000
+                        </div>
+
+                        <button
+                            type="button"
+                            class="detail-image-button"
+                            onclick="openDetailExtraImage()"
+                            aria-label="추가 이미지 보기"
+                            title="추가 이미지 보기">
+                            <span class="magnifier-icon" aria-hidden="true"></span>
+                        </button>
+
                     </div>
 
                     <div class="quantity">
@@ -279,6 +292,42 @@
                 </div>
 
             </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= EXTRA PRODUCT IMAGE ================= -->
+
+    <div
+        id="detail-extra-image-modal"
+        class="detail-extra-image-modal"
+        aria-hidden="true">
+
+        <div
+            class="detail-extra-image-backdrop"
+            onclick="closeDetailExtraImage()">
+        </div>
+
+        <div
+            class="detail-extra-image-frame"
+            role="dialog"
+            aria-modal="true"
+            aria-label="추가 이미지">
+
+            <button
+                type="button"
+                class="detail-extra-image-close"
+                onclick="closeDetailExtraImage()"
+                aria-label="이미지 닫기">
+                &times;
+            </button>
+
+            <img
+                id="detail-extra-image"
+                src=""
+                alt="추가 이미지">
 
         </div>
 
@@ -400,12 +449,25 @@
 
                 </div>
 
-                <button
-                    type="button"
-                    class="purchase-explanation-close"
-                    onclick="closePurchaseExplanation()">
-                    CLOSE
-                </button>
+                <div class="purchase-explanation-actions">
+
+                    <button
+                        type="button"
+                        class="purchase-explanation-back"
+                        onclick="backToPurchaseMessage()">
+                        BACK
+                    </button>
+
+                    <button
+                        type="button"
+                        class="purchase-explanation-close"
+                        onclick="closePurchaseExplanation()">
+                        CLOSE
+                    </button>
+
+
+
+                </div>
 
             </div>
 
