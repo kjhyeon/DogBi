@@ -11,7 +11,7 @@ const products = [
         price: 9900000,
         image: "images/dog01.png",
         detailImage: "images/dog01-detail.png",
-        description: "사람을 좋아하고 애교가 많으며, 새로운 환경에서도 비교적 빠르게 적응하는 성격입니다."
+        description: "마이클 잭슨의 월드투어에서 함께 춤을 추었던 개의 3대 자손이다. 선조의 예술적 감각과 리듬을 이어받은 특별한 혈통이다."
     },
     {
         id: 2,
@@ -21,7 +21,7 @@ const products = [
         price: 8500000,
         image: "images/dog02.png",
         detailImage: "images/dog02-detail.png",
-        description: "작지만 당당하며 주인에 대한 충성심과 표현력이 풍부한 개성 있는 친구입니다."
+        description: "유럽 왕실의 비밀 회의에 참석했던 왕족 전용 반려견의 후손이다. 왕실의 중요한 비밀을 지켜낸 신뢰의 혈통이다."
     },
     {
         id: 3,
@@ -31,7 +31,7 @@ const products = [
         price: 5900000,
         image: "images/dog03.png",
         detailImage: "images/dog03-detail.png",
-        description: "지능이 매우 높고 영리하며 활동적인 성격으로 누구와도 잘 어울립니다."
+        description: "파블로 피카소가 작품을 그릴 때 모델로 삼았던 개의 후손이다. 현대미술의 새로운 시각을 탄생시킨 예술적 혈통이다."
     },
     {
         id: 4,
@@ -41,7 +41,7 @@ const products = [
         price: 7200000,
         image: "images/dog04.png",
         detailImage: "images/dog04-detail.png",
-        description: "부드럽고 하얀 털과 상냥한 성품으로 오랜 시간 사랑받아온 반려견입니다."
+        description: "루브르 박물관의 귀족 후원자가 아꼈던 반려견의 후손이다. 선조는 모나리자 앞에서 오랜 시간 작품을 감상한 것으로 유명하다."
     },
     {
         id: 5,
@@ -51,7 +51,7 @@ const products = [
         price: 7600000,
         image: "images/dog05.png",
         detailImage: "images/dog05-detail.png",
-        description: "에너지가 넘치고 학습 능력이 뛰어나 교감과 야외 활동에 적합합니다."
+        description: "세계 체스 챔피언과의 대국에서 승리한 천재견의 후손이다. 패배한 챔피언은 이후 재대결에 응하지 않았다."
     },
     {
         id: 6,
@@ -61,7 +61,7 @@ const products = [
         price: 8900000,
         image: "images/dog06.png",
         detailImage: "images/dog06-detail.png",
-        description: "세상에 단 하나뿐인 특별한 매력과 건강한 체력을 자랑하는 친구입니다."
+        description: "마릴린 먼로가 생전에 가장 아꼈던 반려견의 후손이다. 선조는 먼로의 곁에서 특별한 사랑을 받았으며, 할리우드 황금기의 아름다운 순간을 함께한 귀한 혈통이다."
     },
     {
         id: 7,
@@ -71,7 +71,7 @@ const products = [
         price: 6400000,
         image: "images/dog07.png",
         detailImage: "images/dog07-detail.png",
-        description: "우아한 외모와 다정하고 총명한 성격으로 깊은 유대감을 선사합니다."
+        description: "영국 왕실에서 국왕의 친서를 전달했던 명견의 4대 자손이다. 중요한 임무를 완수한 충성의 혈통을 이어받았다."
     },
     {
         id: 8,
@@ -81,7 +81,7 @@ const products = [
         price: 5100000,
         image: "images/dog08.png",
         detailImage: "images/dog08-detail.png",
-        description: "순백의 털과 밝은 미소로 보는 이들에게 항상 기쁨을 주는 존재입니다."
+        description: "세계적인 보석 감정사들에게 영감을 준 개의 혈통이다. 빛에 따라 달라지는 털의 광택은 다이아몬드의 브릴리언스에 비견된다."
     },
     {
         id: 9,
@@ -91,7 +91,7 @@ const products = [
         price: 6300000,
         image: "images/dog09.png",
         detailImage: "images/dog09-detail.png",
-        description: "명석한 두뇌와 놀라운 집중력으로 깊은 교감을 이루는 친구입니다."
+        description: "세계 최초의 견공 주식 분석가로 활동한 천재견의 후손이다. 선조가 분석에 참여한 투자팀은 1년 만에 수익률 800%를 기록했다."
     },
     {
         id: 10,
@@ -101,7 +101,7 @@ const products = [
         price: 7700000,
         image: "images/dog10.png",
         detailImage: "images/dog10-detail.png",
-        description: "짧은 다리와 유쾌한 움직임으로 언제나 주변을 밝게 만듭니다."
+        description: "영국 왕실에서 국왕이 가장 아끼던 반려견의 직계 후손이다. 선조는 왕궁의 모든 복도를 자유롭게 이용할 수 있는 특권을 누렸다."
     },
     {
         id: 11,
@@ -111,7 +111,7 @@ const products = [
         price: 6600000,
         image: "images/dog11.png",
         detailImage: "images/dog11-detail.png",
-        description: "느긋하면서도 애교 넘치는 성격으로 다정한 매력을 지녔습니다."
+        description: "파리의 명품 패션 하우스에 영감을 준 개의 후손이다. 선조의 무표정은 인간 모델도 구현하기 어려운 고급스러움으로 평가받았다."
     },
     {
         id: 12,
@@ -121,7 +121,7 @@ const products = [
         price: 5400000,
         image: "images/dog12.png",
         detailImage: "images/dog12-detail.png",
-        description: "용맹함과 지혜로움, 그리고 평생 한 주인만을 바라보는 깊은 충성심을 자랑합니다."
+        description: "극지 탐험대의 귀환 경로를 찾아낸 명견의 후손이다. 선조는 탐험대보다 먼저 기지에 도착했다."
     },
     {
         id: 13,
@@ -131,7 +131,7 @@ const products = [
         price: 7200000,
         image: "images/dog13.png",
         detailImage: "images/dog13-detail.png",
-        description: "지치지 않는 체력과 호기심으로 매일을 생동감 있게 채워줍니다."
+        description: "세계적인 액션 영화에서 주연 배우의 위험한 장면을 대신 연기한 스턴트견의 3대 자손이다. 선조는 엔딩 크레딧에서 주연 배우와 같은 크기로 이름을 올렸다."
     },
     {
         id: 14,
@@ -141,7 +141,7 @@ const products = [
         price: 8000000,
         image: "images/dog14.png",
         detailImage: "images/dog14-detail.png",
-        description: "비단결 같은 털과 똑부러지는 성격으로 당당함을 보여주는 친구입니다."
+        description: "세계 최고의 패션쇼에 공식 모델로 등장한 최초의 강아지 혈통이다. 선조의 짧은 보폭은 런웨이의 새로운 워킹 기준이 되었다."
     },
     {
         id: 15,
@@ -151,7 +151,7 @@ const products = [
         price: 8500000,
         image: "images/dog15.png",
         detailImage: "images/dog15-detail.png",
-        description: "천사 같은 온순함과 넓은 마음으로 온 가족의 안식처가 되어줍니다."
+        description: "세계적인 광고에서 제품보다 높은 관심을 받은 개의 후손이다. 선조가 출연한 광고는 모델의 이름이 제품보다 많이 검색되는 기록을 세웠다."
     },
     {
         id: 16,
@@ -161,7 +161,7 @@ const products = [
         price: 7300000,
         image: "images/dog16.png",
         detailImage: "images/dog16-detail.png",
-        description: "풍성한 털과 커다란 눈망울로 깊은 인상을 남기는 아기자기한 친구입니다."
+        description: "세계적인 수집가 세 명이 동시에 소유권을 원했던 희귀 혈통의 후손이다. 최종 소유자는 구매 대금 외에 별도의 관리 계약까지 제시했다."
     }
 ];
 
@@ -428,133 +428,215 @@ function changeQuantity(amount) {
 
 
 /* =================================================
-   EXTRA PRODUCT IMAGE
+   EXTRA PRODUCT IMAGE + ZOOM
+   돋보기 이미지 클릭 → 확대
+   확대창 X 또는 바깥 배경 클릭 → 확대만 닫기
 ================================================= */
 
-function openDetailExtraImage() {
+function openDetailImageZoom(src, altText) {
+    if (!src) return;
 
+    let zoomModal = document.getElementById("detail-image-zoom-modal");
+
+    // 확대창이 없으면 새로 생성
+    if (!zoomModal) {
+        zoomModal = document.createElement("div");
+        zoomModal.id = "detail-image-zoom-modal";
+
+        zoomModal.setAttribute("role", "dialog");
+        zoomModal.setAttribute("aria-modal", "true");
+        zoomModal.setAttribute("aria-label", "이미지 확대 보기");
+
+        zoomModal.style.cssText = `
+            position: fixed;
+            inset: 0;
+            z-index: 20000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            padding: 24px;
+            background: rgba(0, 0, 0, 0.94);
+            cursor: zoom-out;
+        `;
+
+        // 확대된 이미지
+        const zoomImage = document.createElement("img");
+        zoomImage.id = "detail-image-zoomed";
+
+        zoomImage.style.cssText = `
+            display: block;
+            max-width: 96vw;
+            max-height: 94vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            cursor: default;
+            user-select: none;
+            -webkit-user-drag: none;
+        `;
+
+        // 사진을 눌러도 확대창이 닫히지 않게 함
+        zoomImage.addEventListener("click", function (event) {
+            event.stopPropagation();
+        });
+
+        // 닫기 버튼
+        const closeButton = document.createElement("button");
+        closeButton.type = "button";
+        closeButton.setAttribute("aria-label", "확대 이미지 닫기");
+        closeButton.innerHTML = "&times;";
+
+        closeButton.style.cssText = `
+            position: fixed;
+            top: 12px;
+            right: 18px;
+            z-index: 1;
+            width: 48px;
+            height: 48px;
+            padding: 0;
+            border: 1px solid rgba(255,255,255,0.65);
+            border-radius: 50%;
+            background: rgba(0,0,0,0.35);
+            color: #fff;
+            font-size: 34px;
+            font-weight: 300;
+            line-height: 1;
+            cursor: pointer;
+        `;
+
+        closeButton.addEventListener("click", function (event) {
+            event.stopPropagation();
+            closeDetailImageZoom();
+        });
+
+        // 확대된 사진 바깥의 어두운 배경을 누르면 확대만 닫기
+        zoomModal.addEventListener("click", function (event) {
+            if (event.target === zoomModal) {
+                closeDetailImageZoom();
+            }
+        });
+
+        zoomModal.appendChild(zoomImage);
+        zoomModal.appendChild(closeButton);
+        document.body.appendChild(zoomModal);
+    }
+
+    // 선택한 상품의 이미지 표시
+    const zoomImage = document.getElementById("detail-image-zoomed");
+
+    if (zoomImage) {
+        zoomImage.src = src;
+        zoomImage.alt = altText || "확대 이미지";
+    }
+
+    zoomModal.style.display = "flex";
+    document.body.classList.add("no-scroll");
+}
+
+
+// 확대창만 닫기
+function closeDetailImageZoom() {
+    const zoomModal = document.getElementById("detail-image-zoom-modal");
+
+    if (zoomModal) {
+        zoomModal.remove();
+    }
+
+    // 원래 돋보기 창이 열려 있으면 스크롤 잠금 유지
+    const detailModal = document.getElementById("detail-extra-image-modal");
+
+    const detailIsOpen = detailModal &&
+        getComputedStyle(detailModal).display !== "none";
+
+    const productModal = document.getElementById("product-modal");
+
+    const productIsOpen = productModal &&
+        getComputedStyle(productModal).display !== "none";
+
+    if (detailIsOpen || productIsOpen) {
+        document.body.classList.add("no-scroll");
+    } else {
+        document.body.classList.remove("no-scroll");
+    }
+}
+
+
+// 돋보기 이미지 창 열기
+function openDetailExtraImage() {
     if (!selectedProduct) return;
 
-
-    const modal =
-        document.getElementById(
-            "detail-extra-image-modal"
-        );
-
-    const image =
-        document.getElementById(
-            "detail-extra-image"
-        );
-
+    const modal = document.getElementById("detail-extra-image-modal");
+    const image = document.getElementById("detail-extra-image");
 
     if (!modal || !image) return;
 
+    image.dataset.fallbackApplied = "false";
+    image.style.opacity = "1";
+    image.alt = `${selectedProduct.breed} 추가 이미지`;
 
-    image.dataset.fallbackApplied =
-        "false";
+    // 사진 클릭 시 확대 기능 추가
+    image.style.cursor = "zoom-in";
 
-    image.style.opacity =
-        "1";
+    image.onclick = function (event) {
+        event.stopPropagation();
 
-    image.alt =
-        `${selectedProduct.breed} 추가 이미지`;
+        openDetailImageZoom(
+            this.currentSrc || this.src,
+            this.alt
+        );
+    };
 
+    // 상세 이미지가 없으면 기본 상품 이미지 사용
+    image.onerror = function () {
+        if (this.dataset.fallbackApplied !== "true") {
+            this.dataset.fallbackApplied = "true";
+            this.src = selectedProduct.image;
+        } else {
+            this.style.opacity = "0.35";
+        }
+    };
 
-    image.onerror =
-        function () {
-
-            if (
-                this.dataset.fallbackApplied !==
-                "true"
-            ) {
-
-                this.dataset.fallbackApplied =
-                    "true";
-
-                this.src =
-                    selectedProduct.image;
-
-            } else {
-
-                this.style.opacity =
-                    "0.35";
-
-            }
-
-        };
-
-
+    // 설정된 확대용 이미지 경로 사용
     image.src =
         selectedProduct.detailImage ||
         selectedProduct.image;
 
+    modal.style.display = "flex";
 
-    modal.style.display =
-        "flex";
+    modal.setAttribute("aria-hidden", "false");
 
-    modal.setAttribute(
-        "aria-hidden",
-        "false"
-    );
-
-
-    document.body.classList.add(
-        "no-scroll"
-    );
-
+    document.body.classList.add("no-scroll");
 }
 
 
+// 돋보기 이미지 창 닫기
 function closeDetailExtraImage() {
+    // 돋보기 창을 닫을 때 확대창도 남지 않게 정리
+    const zoomModal = document.getElementById("detail-image-zoom-modal");
 
-    const modal =
-        document.getElementById(
-            "detail-extra-image-modal"
-        );
+    if (zoomModal) {
+        zoomModal.remove();
+    }
+
+    const modal = document.getElementById("detail-extra-image-modal");
 
     if (modal) {
-
-        modal.style.display =
-            "none";
-
-        modal.setAttribute(
-            "aria-hidden",
-            "true"
-        );
-
+        modal.style.display = "none";
+        modal.setAttribute("aria-hidden", "true");
     }
 
+    const productModal = document.getElementById("product-modal");
 
-    const productModal =
-        document.getElementById(
-            "product-modal"
-        );
-
-
-    const productIsOpen =
-        productModal &&
-        getComputedStyle(
-            productModal
-        ).display !== "none";
-
+    const productIsOpen = productModal &&
+        getComputedStyle(productModal).display !== "none";
 
     if (productIsOpen) {
-
-        document.body.classList.add(
-            "no-scroll"
-        );
-
+        document.body.classList.add("no-scroll");
     } else {
-
-        document.body.classList.remove(
-            "no-scroll"
-        );
-
+        document.body.classList.remove("no-scroll");
     }
-
 }
-
-
 /* =================================================
    ADD TO BAG
 ================================================= */
