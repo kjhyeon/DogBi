@@ -115,7 +115,7 @@ const products = [
     },
     {
         id: 12,
-        breed: "진돗개",
+        breed: "믹스견",
         happiness: "82%",
         anger: "18%",
         price: 5400000,
